@@ -2,7 +2,6 @@
 
 ul#menu > li{
     display: inline;
-
 }
 #header{
     height: 100px;
@@ -28,7 +27,7 @@ ul#menu > li{
     
 }
 
-ul#menu > li a{
+ul#menu > li > a{
     margin: 10px;
     text-decoration: none;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -203,5 +202,37 @@ ul#menu > li a{
 }
 
 
+#dropdown{
+    display: none;
+    position: absolute;
+    top:20px;
+    left:0px;
+    box-shadow: 5px 5px 5px gray, 3px 3px gray;
+    border: 1px solid black;
+    background-color: white;
+    
+    
+}
+ul#dropdown > li {
+    
+    display: inline;
+    
+}
 
+ul#dropdown > li > a{
+    text-decoration: none;
+    margin-right:50px;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+#hasdropdown{
+    position: relative;
+    z-index: 1;
+}
+
+#menu #hasdropdown:hover #dropdown{
+    display: block;
+    
+}
 
