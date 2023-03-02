@@ -18,13 +18,13 @@ ul#menu > li{
 
 #menu {
     display: flex;
-
+    margin-left: 40%;
     align-items: center;
 }
 
 #logo{
     
-    width: 8%;
+    width: 20%;
     
 }
 
@@ -47,12 +47,28 @@ ul#menu > li a{
     font-weight: 800;
     height: 50px;
     width: 8%;
-   margin-right: 8%;
+    margin-right: 4%;
+}
+
+#Signup{
+    background-color: orange;
+    border-color: white;
+    color: black;
+    border-radius: 40px;
+    border-style:solid;
+    font-weight: 800;
+    height: 55px;
+    width: 25%;
 }
 
 .rightSideBar{
     float: right;
-    height: 250px;
+    height: 220px;
+    box-shadow: 5px 5px 5px black, 3px 3px gray;
+    margin-left: 6%;
+    width: 50px;
+    border-radius: 5px;
+
 }
 
 
@@ -62,25 +78,130 @@ ul#menu > li a{
     display: flex;
 }
 
-.MainPic{
 
-    width: 100%;
-    height: 550px;
-   
-}
 #pic{
-    width: 600px;
-    height: 550px;
+    width: 700px;
+    height: 650px;
 }
 
 .intro{
     align-items: center;
+    width: 40%;
+    padding-left: 150px;
+    padding-right: 50px;
     
-    width: 70%;
-    margin-left: 150px;
 }
-p{
+.intro p{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+    
+}
+.intro h1{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+#imagediv{
+    
+    background-image:url("/Images/main.png");
+    background-repeat: no-repeat;
+    display: flex;
+    height: 45em;
+    width: 100%;
+    opacity: 0.9;
+    background-size: 100%;
+    border-radius: 10px;
+    
     
 }
+
+#imagediv h1{
+    color:white ;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 4em;
+    font-size: 5em;
+    margin-left: 25px;
+}
+
+.rightSideBar i{
+    font-size:30px;
+    margin: 0.4em;
+
+}
+
+.services{
+    margin-top: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    padding-left: 50px;
+    
+}
+.service{
+    padding-right: 50px;
+    padding-left: 50px;
+    text-align: center;
+}
+
+.servicepic{
+    width: 150px;
+    height: 150px;
+    
+}
+
+.service h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+.service p{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#footer{
+    height: 300px;
+    margin-top: 30px;
+    background-color:black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.footerright h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.footerright p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white ;
+}
+
+.info{
+    display: flex;
+}
+
+.info i{
+    font-size:30px;
+    margin: 0.4em;
+    color: white;
+
+}
+
+.info p{
+    color: white;
+}
+
+.footerleft{
+    margin-left:100px;
+    margin-right:200px;
+    margin-top: 50px;
+}
+
+
+
+
