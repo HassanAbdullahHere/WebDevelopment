@@ -38,12 +38,17 @@ ul#menu > li > a{
     font-size: 10;
     font-weight: 800;
     color: black;
+    transition: color 0.3s ease;
     
 }
+ul#menu > li > a:hover{
+    color: goldenrod;
+}
+
 #MenuButton{
 
     background-color: gold;
-    border-color: white;
+    border-color: black;
     color: black;
     border-radius: 40px;
     border-style:solid;
@@ -51,6 +56,11 @@ ul#menu > li > a{
     height: 50px;
     width: 8%;
     margin-right: 4%;
+    transition: color 0.2s ease;
+}
+
+#MenuButton:hover{
+    background-color: white;
 }
 
 #Signup{

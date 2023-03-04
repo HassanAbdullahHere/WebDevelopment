@@ -5,19 +5,179 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Design.css">
-    <title>CV</title>
+    <title>Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body >
-    <div class="one">
-        <img class="first" src="profile.jpg" alt="">
-        <h1>Hassan Abdullah</h1>
-        <p style="font-family:Arial, Helvetica, sans-serif; font-weight:lighter; font-size:18px">WEB DEVELOPER &#128512;</p>
-        <a href="http://"> 
-            <img src="github.png" alt="">
+    <header class="header">
+        <a href="#" class="logo">Portfo<span>lio.</span></a>
+        <i class='bx bx-menu' id="menu-icon"   ></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Hassan Abdullah</h1>
+            <h3>And I am a <span class="multiText"></span></h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore ipsam sunt repudiandae quod porro voluptas hic perspiciatis, blanditiis enim! Ut, perspiciatis temporibus libero nostrum veniam minus architecto ad ullam neque.</p>
+            <div class="social-media">
+                <a href="#">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bxl-linkedin-square' ></i>
+                </a>
+                <a href="#">
+                    <i class='bx bxl-twitter' ></i>
+                </a>
+            </div>
+            <a href="#" class="button">Hire Me</a>
+        </div>
+
+        <div class="home-image">
+            <img src="/images/Untitled design (2).png" alt="homeimage">
+        </div>
+    </section>   
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="/images/Untitled design.png" alt="aboutimg">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">
+                About <span>Me</span>
+            </h2>
+            <h3>Web Developer!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe distinctio modi similique cum. Qui sapiente voluptatum voluptas cupiditate vel distinctio similique delectus reiciendis nam voluptatibus? Architecto fugit consequatur dolorem doloribus.</p>
+             <a href="#" class="button">Download CV</a>   
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="heading">
+            Our <span>Services</span>
+        </h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code' ></i>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quo accusamus ullam voluptatum atque tempora doloremque possimus nisi necessitatibus veritatis! Modi iste eveniet unde voluptatem! Aspernatur odio impedit suscipit consectetur!</p>
+                <a href="" class="button">View</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bx-mobile-alt'></i>
+                <h3>App Development</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quo accusamus ullam voluptatum atque tempora doloremque possimus nisi necessitatibus veritatis! Modi iste eveniet unde voluptatem! Aspernatur odio impedit suscipit consectetur!</p>
+                <a href="" class="button">View</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bx-paint'></i>
+                <h3>Designing</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quo accusamus ullam voluptatum atque tempora doloremque possimus nisi necessitatibus veritatis! Modi iste eveniet unde voluptatem! Aspernatur odio impedit suscipit consectetur!</p>
+                <a href="" class="button">View</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title">
+                My <span>Skills</span>
+            </h2>
+            <div class="skills-content">
+                <div class="column-left">
+                    <div class="text">
+                        My creative skills & Experiences
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi iste explicabo nemo tempore mollitia corporis quidem rerum voluptate cum fuga dolores atque eius eos iusto aspernatur illo, veniam quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ab odit architecto, culpa doloribus adipisci vero eaque error aspernatur quia laboriosam veniam sed. Incidunt blanditiis quo expedita voluptatum sed officiis!</p>
+                    <a href="" class="button">Read More</a>
+                </div>
+                <div class="column-right">
+                    <div class="bars">
+                        <div class="info">
+                            <span>HTML</span>
+                            <h3>85%</h3>
+                        </div>
+                        <div class="line html"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>CSS</span>
+                            <h3>80%</h3>
+                        </div>
+                        <div class="line css"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>JS</span>
+                            <h3>70%</h3>
+                        </div>
+                        <div class="line js"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Python</span>
+                            <h3>90%</h3>
+                        </div>
+                        <div class="line python"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>SQL</span>
+                            <h3>60%</h3>
+                            
+                        </div>
+                        
+                        <div class="line sql"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Email">
+
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+                
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message Here"></textarea>
+            <input type="submit" value="Send Message" class="button">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy: 2023 by Hassan Abdullah | All Rights Reserved.</p>
+        </div>
+        
+    </footer>
+
+    <div class="topicon">
+        <a href="#home" class="button">
+            <i class='bx bx-up-arrow-alt' ></i>
         </a>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
     
-    <div class="two"></div>
 </body>
 
 </html>
