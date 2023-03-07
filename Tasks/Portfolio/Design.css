@@ -16,7 +16,23 @@
     --second-bg-color: #323946;
     --text-color: #fff;
     --main-color: #0ef;
+}
 
+.change-theme{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-right: 50rem;
+    cursor: pointer;
+    background: transparent;
+    transition: 0.5s;
+    
+    
+}
+
+.change-theme:hover{
+    color: var(--main-color);
+    transform: scale(1.2);
+    
 }
 
 html{
@@ -28,6 +44,13 @@ html{
 body{
     background: var(--bg-color);
     color: var(--text-color);
+}
+
+body.dark-theme{
+    --bg-color: #BFDCE5;
+    --second-bg-color: #93BFCF;
+    --text-color: #000;
+    --main-color: #3F979B;
 }
 
 .header{
@@ -44,7 +67,9 @@ body{
 }
 
 .header.sticky{
+    box-shadow: 0 0 1rem var(--main-color);
     background-color: var(--bg-color);
+    
 }
 .logo{
     font-size: 2.5rem;
@@ -87,6 +112,7 @@ section{
     align-items: center;
 
 }
+
 
 .home-content h3{
     font-size: 3.2rem;
@@ -160,7 +186,9 @@ span{
     background: var(--main-color);
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
+    transform: scale(1.2);
 }
+
 
 .button{
     display: inline-block;
@@ -178,6 +206,7 @@ span{
 
 .button:hover{
     box-shadow: none;
+    
 
 }
 
@@ -389,6 +418,9 @@ span{
     
 }
 
+.topicon.hide{
+    opacity: 1;
+}
 
 .topicon a i{
     font-size: 2rem;
