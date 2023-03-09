@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior:smooth;
+    font-family:"Poppins";
+}
+
+:root{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #66347F;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+}
+
+body{
+    background-image: url('/bg.jpg');
+    color: var(--text-color);
+    align-items: center;
+    justify-content: center;
+}
+span{
+    color: var(--main-color);
+}
+
+.main{
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 2rem var(--main-color);
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 600px;
+    position: relative;
+    top: 150px;
+    left: 530px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main h2{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 900;
+    cursor: default;
+    margin-bottom: 2rem;
+}
+
+
+form{
+    max-width: 60rem;
+    margin: 1rem auto;
+    text-align:  center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+form .input-box input{
+    width: 350px;   
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    box-shadow: 0 0 .4rem var(--main-color);
+    border-radius: 10px;
+    min-height: 47px;
+    border: 1px solid white;
+    
+    
+}
+
+form .input-box label{
+    font-size: 1.2rem;
+    
+}
+
+
+.button{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    cursor: pointer;
+    font-size:1.5rem ;
+    color: var(--text-color);
+    letter-spacing: .1rem;
+    font-weight: 650;
+    transition: .5s ease;
+    margin-top: 40px;
+}
+
+.button:hover{
+    box-shadow: none;
+
+}
+
+#image{
+    width: 300px;
+    position: absolute;
+    top:110px;
+    left: 400px;
+    z-index: 1;
+    animation: floating 3s ease-in-out infinite;
+}
+@keyframes floating{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform:  translateY(-2rem) ;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin:1rem;
+    transition: .5s ease;
+}
+
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 1rem var(--main-color);
+    transform: scale(1.2);
+}
