@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="Design.css">
     <title>Portfolio</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
 </head>
 <body >
     <header class="header">
@@ -147,7 +151,7 @@
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
-        <form onsubmit="Send();">
+        <form onsubmit="Send()">
             <div class="input-box">
                 <input type="text" name="Name" placeholder="Full Name"  id="name" required>
                 <input type="email" name="Email" placeholder="Email" id="email" required>
@@ -155,10 +159,10 @@
             </div>
             <div class="input-box">
                 <input type="number" name="Number" placeholder="Mobile Number">
-                <input type="text" id="Email Subject" placeholder="Email Subject">
+                <input type="text" name="Subject" id="Email Subject" placeholder="Email Subject">
                 
             </div>
-            <textarea name="Message" id="" cols="30" rows="10" placeholder="Message Here" id="message" required></textarea>
+            <textarea name="Message"  cols="30" rows="10" placeholder="Message Here" id="message" required></textarea>
             <input type="submit" value="Send Message" class="button">
         </form>
     </section>
@@ -175,10 +179,7 @@
             <i class='bx bx-up-arrow-alt' ></i>
         </a>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="script.js"></script>
+    
   
     <script>
         function Send(){
@@ -187,9 +188,9 @@
                 Username : "hassanabdullahhere01@gmail.com",
                 Password : "E03E5F6DF1AA1C7DA228DD1BDFCE1C1CE6B1",
                 To : "hassanabdullahhere01@gmail.com",
-                From : document.getElementById("email"),
-                Subject : document.getElementById("Email Subject"),
-                Body : document.getElementById("message")
+                From : document.getElementsByName("Email").values,
+                Subject : document.getElementsByName("Subject").values,
+                Body : document.getElementsByName("Message").values
             }).then(
             message => alert("Your Message Sent")
             );
