@@ -73,10 +73,26 @@ form .input-box input{
     width: 350px;   
     margin-top: 2rem;
     font-size: 1.3rem;
-    box-shadow: 0 0 .4rem var(--main-color);
+    
     border-radius: 10px;
     min-height: 47px;
     border: 1px solid white;
+    
+    
+}
+
+.success{
+    
+    box-shadow: 0 0 1rem green;
+    
+    
+    
+}
+
+.fail{
+    
+    box-shadow: 0 0 1rem red;
+    
     
     
 }
