@@ -10,6 +10,14 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init("nkrcwb7d7nFx18-l2");
+        })();
+        </script>
     
 </head>
 <body >
@@ -32,7 +40,7 @@
             <h3>Hello, It's Me</h3>
             <h1>Hassan Abdullah</h1>
             <h3>And I am a <span class="multiText"></span></h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore ipsam sunt repudiandae quod porro voluptas hic perspiciatis, blanditiis enim! Ut, perspiciatis temporibus libero nostrum veniam minus architecto ad ullam neque.</p>
+            <p> A developer who loves to develope. Not Just Programs, an ease for people to make their work efficient and their lives beautiful.Always here to help and serve the humans, creations of God.</p>
             <div class="social-media">
                 <a href="https://github.com/HassanAbdullahHere">
                     <i class='bx bxl-github'></i>
@@ -48,7 +56,7 @@
         </div>
 
         <div class="home-image">
-            <img src="/images/Untitled design (2).png" alt="homeimage">
+            <img src="/images/Untitled design (1).png" alt="homeimage">
         </div>
     </section>   
 
@@ -61,8 +69,8 @@
             <h2 class="heading">
                 About <span>Me</span>
             </h2>
-            <h3>Web Developer!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe distinctio modi similique cum. Qui sapiente voluptatum voluptas cupiditate vel distinctio similique delectus reiciendis nam voluptatibus? Architecto fugit consequatur dolorem doloribus.</p>
+            <h3>Software Developer!</h3>
+            <p>I am Person who loves to learn and apply skills to practical applications. I Love Design and good at it.Innovation is my motive and making lifes of people easy by using Computer Science Skills is one of my Objective. If you wanna know more about me, do contact me.</p>
              <a href="/Resume-Hassan-Abdullah.pdf" class="button">Download CV</a>   
         </div>
     </section>
@@ -75,19 +83,19 @@
             <div class="services-box">
                 <i class='bx bx-code' ></i>
                 <h3>Web Development</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quo accusamus ullam voluptatum atque tempora doloremque possimus nisi necessitatibus veritatis! Modi iste eveniet unde voluptatem! Aspernatur odio impedit suscipit consectetur!</p>
+                <p>I can build a completely working Website. Following skills that I am good at: HTML, CSS, JS, JQuery, Node.js, Express, React. I can do logic building and can assist you with it.</p>
                 <a href="#contact" class="button">Hire</a>
             </div>
             <div class="services-box">
                 <i class='bx bx-mobile-alt'></i>
                 <h3>App Development</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quo accusamus ullam voluptatum atque tempora doloremque possimus nisi necessitatibus veritatis! Modi iste eveniet unde voluptatem! Aspernatur odio impedit suscipit consectetur!</p>
+                <p>I am Good at Application Development using React Native and confident enough to build or assist in any kind of Mobile Application, having a necessary skill of error handling and debugging is the key.</p>
                 <a href="#contact" class="button">Hire</a>
             </div>
             <div class="services-box">
                 <i class='bx bx-paint'></i>
                 <h3>Designing</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quo accusamus ullam voluptatum atque tempora doloremque possimus nisi necessitatibus veritatis! Modi iste eveniet unde voluptatem! Aspernatur odio impedit suscipit consectetur!</p>
+                <p>Designing is an Art and I am the Artist, hehe. I am good at designing Web, App and Any other kind of Designs like poster etc.</p>
                 <a href="#contact" class="button">Hire</a>
             </div>
         </div>
@@ -103,7 +111,12 @@
                     <div class="text">
                         My creative skills & Experiences
                     </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi iste explicabo nemo tempore mollitia corporis quidem rerum voluptate cum fuga dolores atque eius eos iusto aspernatur illo, veniam quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ab odit architecto, culpa doloribus adipisci vero eaque error aspernatur quia laboriosam veniam sed. Incidunt blanditiis quo expedita voluptatum sed officiis!</p>
+                    <p>- WEB (HTML, CSS, JQuery, JavaScript, React, Node.js, Express.js)
+                        - APP (React Native)
+                        - GAME (Unity)
+                        - Programming (C, C++, C#)
+                        - AI (Python)
+                        - Computer Vision (MATLAB, Python) . . . . . . .</p>
                     <a href="/Resume-Hassan-Abdullah.pdf" class="button">More About Me</a>
                 </div>
                 <div class="column-right">
@@ -151,7 +164,7 @@
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
-        <form onsubmit="Send()">
+        <form onsubmit="sendMail()" >
             <div class="input-box">
                 <input type="text" name="Name" placeholder="Full Name"  id="name" required>
                 <input type="email" name="Email" placeholder="Email" id="email" required>
@@ -162,8 +175,8 @@
                 <input type="text" name="Subject" id="Email Subject" placeholder="Email Subject">
                 
             </div>
-            <textarea name="Message" id="" cols="30" rows="10" placeholder="Message Here" id="message" required></textarea>
-            <input type="submit" value="Send Message" class="button">
+            <textarea name="Message" id="message" cols="30" rows="10" placeholder="Message Here" id="message" required></textarea>
+            <button type="button" onclick="sendMail()" class="button">Submit</button>
         </form>
     </section>
 
@@ -182,21 +195,7 @@
     <script src="script.js"></script>
     
   
-    <script>
-        function Send(){
-            Email.send({
-                Host : "smtp.elasticemail.com",
-                Username : "hassanabdullahhere01@gmail.com",
-                Password : "E03E5F6DF1AA1C7DA228DD1BDFCE1C1CE6B1",
-                To : "hassanabdullahhere01@gmail.com",
-                From : document.getElementsByName("Email").values,
-                Subject : document.getElementsByName("Subject").values,
-                Body : document.getElementsByName("Message").values
-            }).then(
-            message => alert("Your Message Sent")
-            );
-        }
-    </script>
+    
     
     
 </body>
