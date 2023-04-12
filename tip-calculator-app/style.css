@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+body{
+    background: hsl(185, 41%, 84%);
+}
+
+#main{
+    background: white;
+    position: absolute;
+    height: 500px;
+    width: 50%;
+    border-radius: 30px;
+    top: 300px;
+    left: 450px;
+    box-shadow: 1rem 0 1rem hsl(184, 14%, 56%);
+    align-items: center;
+    display: flex;
+}
+
+#Logo{
+    
+    display: flex;
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    top: 150px;
+    left: 850px;
+    justify-content: center;
+    align-items: center;
+}
+
+#Logo p{
+    color: hsl(186, 14%, 43%);
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+}
+
+#right{
+    background-color: hsl(183, 100%, 15%);
+    height: 85%;
+    width: 45%;
+    position:absolute;
+    border-radius: 20px;
+    right: 30px;
+    
+}
+#left{
+    
+    height: 100%;
+    width: 55%;
+    position: relative;
+}
+
+#bill{
+    display: flex;
+    align-items: center;
+    height:100px;
+    
+}
+
+#bill #text{
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    display: flex;
+}
+
+#bill #text h2{
+    color: white;
+    font-family: Poppins;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+#bill #text p{
+    color:hsl(185, 41%, 84%);
+    font-family: Poppins;
+    font-size: 12px;
+}
+#bill #cash{
+    color: hsl(172, 67%, 45%);
+    font-size: 2rem;
+    font-family: Poppins;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#reset{
+    background-color:hsl(172, 67%, 45%) ;
+    height: 50px;
+    width: 80%;
+    position: absolute;
+    border-radius: 5px;
+    bottom:50px;
+    left: 50px;
+    box-shadow: 0 0 0.5rem hsl(172, 67%, 45%);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+#reset:hover{
+    background-color: hsl(185, 41%, 84%);
+    box-shadow: none;
+}
+
+#reset h3{
+    font-family: Poppins;
+    letter-spacing: 3px;
+    color: hsl(183, 100%, 15%);
+}
