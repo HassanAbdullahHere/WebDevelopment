@@ -1,0 +1,32 @@
+<%- include('../layout/AdminHeader'); -%>
+
+<div class="container">
+<h2 class="page-title">Pages</h2>
+<a href="/admin/pages/add-page" class="btn btn-primary">Add New Page</a>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% b.forEach(function(B){ %>
+        <tr>
+            <td><%= B.title %></td>
+            <td><a class="btn btn-warning" href="/admin/pages/edit-page/<%=B._id%>">Edit</a></td>
+            <% if (B.slug == 'home'){ %>
+                <td></td>
+             <%} else {%>
+            <td><a class="btn btn-danger" href="/admin/pages/delete-page/<%=B._id%>">Delete</a></td>
+                <% } %>
+        </tr>
+       <% }) %>
+    </tbody>
+</table>
+
+</div>
+<%- include('../layout/AdminFooter'); -%>

@@ -1,0 +1,17 @@
+<%- include('../layout/AdminHeader'); -%>
+
+<div class="container">
+<h2 class="page-title">Edit a Category</h2>
+<a href="/admin/categories" class="btn btn-primary">Back</a>
+
+<form method="post" action="/admin/categories/edit-category/<%= editCat._id %>">
+    <div class="form-group">
+        <label for="">Title</label>
+        <input class="form-control" type="text" name="title" value="<%= editCat.title %>" placeholder="Title">
+        <button  class="btm btm-default">Submit</button>
+    </div>
+        
+</form>
+
+</div>
+<%- include('../layout/AdminFooter'); -%>
