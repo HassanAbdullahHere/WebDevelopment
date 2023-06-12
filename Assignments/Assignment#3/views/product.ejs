@@ -1,0 +1,111 @@
+<%- include('layout/header') -%>
+
+<style>
+  .product-details {
+    margin-top: 2rem;
+  }
+
+  .product-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-image:hover {
+    transform: scale(1.1);
+  }
+
+  .product-description {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .add-to-cart {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .product-image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    overflow: auto;
+    cursor: pointer;
+  }
+
+  .product-image-modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    margin-top: 10%;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+
+<div class="row product-details">
+  <h1 class="page-header product-title"><%= p.title %></h1>
+  <div class="col-xs-12 col-md-5">
+    <img class="product-image spi" src="/product_images/<%= p._id %>/<%= p.image %>" alt="">
+    <br>
+  </div>
+  <div class="col-xs-12 col-md-7">
+    <p class="product-description"><%= p.desc %></p>
+    <p class="product-price">$<%= parseFloat(p.price).toFixed(2) %></p>
+    <p class="add-to-cart"><a href="/cart/add/<%= p.slug %>">Add to Cart</a></p>
+  </div>
+</div>
+
+<!-- Product Image Modal -->
+<div id="productImageModal" class="product-image-modal">
+  <span class="close-modal" onclick="closeModal()">&times;</span>
+  <img class="product-image-modal-content" id="modalImage">
+</div>
+
+<script>
+  // Open Modal with Larger Image
+  const productImage = document.querySelector('.product-image');
+  const modalImage = document.getElementById('modalImage');
+  const productImageModal = document.getElementById('productImageModal');
+
+  productImage.addEventListener('click', function() {
+    modalImage.src = this.src;
+    productImageModal.style.display = 'block';
+  });
+
+  // Close Modal
+  function closeModal() {
+    productImageModal.style.display = 'none';
+  }
+</script>
+
+<%- include('layout/footer'); -%>
